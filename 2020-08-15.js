@@ -26,3 +26,14 @@ function mapToProductOfOtherNumbers(list){
 console.log(mapToProductOfOtherNumbers([]), '[]')
 console.log('[120, 60, 40, 30, 24]', mapToProductOfOtherNumbers([1, 2, 3, 4, 5]))
 console.log('[2, 3, 6]', mapToProductOfOtherNumbers([3, 2, 1]))
+
+console.log('Alternative mit Division')
+
+function mapToProductOfOtherNumbers2(list) {
+  const product = productOfList(list)
+  return list.map(item => product / item)
+}
+
+console.log(mapToProductOfOtherNumbers2([]), '[]')
+console.log('[120, 60, 40, 30, 24]', mapToProductOfOtherNumbers2([1, 2, 3, 4, 5]))
+console.log('[2, 3, 6]', mapToProductOfOtherNumbers2([3, 2, 1]))
